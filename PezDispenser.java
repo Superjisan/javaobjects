@@ -21,7 +21,11 @@ public class PezDispenser{
   }
 
   public void load(){
-    mPezCount = MAX_PEZ;
+    load(MAX_PEZ);
+  }
+
+  public void load(int pezAmount){
+  	mPezCount+= pezAmount;
   }
 
 	public String getCharacterName(){

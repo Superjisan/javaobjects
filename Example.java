@@ -23,5 +23,11 @@ public class Example{
     if(dispenser.isEmpty()){
     	System.out.println("Ate all the Pez!");
     }
+
+    dispenser.load(4);
+    dispenser.load(2);
+    while(dispenser.dispense()){
+    	System.out.println("CHOMP!");
+    }
   }
 }
