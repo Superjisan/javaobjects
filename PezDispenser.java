@@ -25,7 +25,11 @@ public class PezDispenser{
   }
 
   public void load(int pezAmount){
-  	mPezCount+= pezAmount;
+  	int newAmount = mPezCount + pezAmount;
+  	if(newAmount > MAX_PEZ){
+  		throw new IllegalArgumentException("TOO MANY PEZ!");
+  	}
+  	mPezCount += pezAmount;
   }
 
 	public String getCharacterName(){

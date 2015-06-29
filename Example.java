@@ -29,5 +29,13 @@ public class Example{
     while(dispenser.dispense()){
     	System.out.println("CHOMP!");
     }
+    try{
+	    dispenser.load(300);
+	    System.out.println("This will never happen");
+    }catch(IllegalArgumentException iae){
+    	System.out.println("WOW THERE!");
+    	System.out.printf("The error was %s\n", iae.getMessage());
+    }
   }
+
 }
